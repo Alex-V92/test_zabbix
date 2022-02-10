@@ -32,7 +32,7 @@ if metric == None or hostgroup == None:
 # подключение к тестовому стенду
 zapi = ZabbixAPI(zabbix_server, user=os.environ.get('ZABBIX_USERNAME'), password=os.environ.get('ZABBIX_PASSWORD'))
 if os.environ.get('ZABBIX_USERNAME') == None or os.environ.get('ZABBIX_PASSWORD') == None:
-    raise ('Не указаны переменные окружения ZABBIX_USERNAME и ZABBIX_PASSWORD')
+    raise ('Не указаны переменные окружения ZABBIX_USERNAME и\или ZABBIX_PASSWORD')
 
 # получение списка всех групп и итерация по всем найденным элементам, пока не найдёт нужный нам
 groups = zapi.hostgroup.get(output=['itemid', 'name'])
