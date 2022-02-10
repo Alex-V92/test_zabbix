@@ -29,3 +29,10 @@ ________________________________________________________________________________
 <li>-m для указания нужного элемента данных</li>
 <li>-z для указания заббикс-сервера</li>
 Так же, благодаря argpars, доступна команда -h или --help для справки по скрипту.
+<h3>Пример выполнения:</h3
+<p>python3 --version(установлен ли python)</p>
+<p>sudo apt -y install python3-pip</p>
+<p>pip install py-zabbix</p>
+<p>export ZABBIX_PASSWORD=zabbix</p>
+<p>export ZABBIX_USERNAME=Admin</p>
+<p>./zabbix_metric.py --sql 'TestBD' --csv 'TestCSV' -g 'Discovered hosts' -m 'System description' -z 'http://172.16.2.2/zabbix'</p>
