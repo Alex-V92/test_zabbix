@@ -57,7 +57,7 @@ for item in items:
     list_host_metric = []
     list_host_metric.append(list(filter(lambda x: x['hostid'] == item['hostid'], hosts))[0]['name'])
     list_host_metric.append(datetime.fromtimestamp(int(item['lastclock'])).strftime('%Y-%m-%d %H:%M:%S'))
-    list_host_metric.append(item['lastvalue'][:5])
+    list_host_metric.append(item['lastvalue'])
     metric_list.append(list_host_metric)
 
 # Создание БД, если передан необязательный аргумент sql
